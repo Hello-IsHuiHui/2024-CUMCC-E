@@ -1,0 +1,12 @@
+numpy
+pandas
+matplotlib
+scikit-learn
+scipy
+seaborn
+pyswarm
+torch
+dask 
+tensorflow
+plotly
+pygad
