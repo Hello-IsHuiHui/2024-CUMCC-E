@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>遗传算法流程图</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'default',
+            flowchart: {
+                useMaxWidth: true,
+                htmlLabels: true
+            }
+        });
+    </script>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .mermaid {
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="mermaid">
+        graph TD
+            A[开始] --> B[初始化种群]
+            B --> C[计算适应度]
+            C --> D{是否达到终止条件?}
+            D -- 是 --> E[输出最优解]
+            D -- 否 --> F[选择操作]
+            F --> G[交叉操作]
+            G --> H[变异操作]
+            H --> I[新种群]
+            I --> C
+            style A fill:#f9f,stroke:#333,stroke-width:2px
+            style B fill:#bbf,stroke:#333,stroke-width:2px
+            style C fill:#bbf,stroke:#333,stroke-width:2px
+            style D fill:#ff9,stroke:#333,stroke-width:2px
+            style E fill:#9f9,stroke:#333,stroke-width:2px
+            style F fill:#bbf,stroke:#333,stroke-width:2px
+            style G fill:#bbf,stroke:#333,stroke-width:2px
+            style H fill:#bbf,stroke:#333,stroke-width:2px
+            style I fill:#bbf,stroke:#333,stroke-width:2px
+    </div>
+    <script>
+        // 要保存为PNG，请在浏览器中打开此HTML，右键点击流程图，选择“保存图像为...” 或使用截图工具。
+    </script>
+</body>
+</html>
